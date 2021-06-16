@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        project 78
+    </title>
+</head>
+
+<body>
+    <center>
+        <h1>My Family Book</h1>
+        <img src="dad.png" style="width:30%;" id="family_member_image">
+        <p id="family_member_name" style="width:500px;height:250px"></p>
+        <button onclick="update()">Next</button>
+    </center>
+    <script>
+        var images = ["sister.jpeg", "mom.png", "dad.png", "raj.jpeg"];
+        var names = ["Shrimant Biradar", "Sunita Biradar", "Sakshi Biradar", "Raj Biradar"];
+
+        var i = 0
+
+        function update() {
+            var numbers_of_family_member_in_array = 4;
+            if (i > numbers_of_family_member_in_array) {
+                i = 0
+            }
+            var updateimage = images[i];
+            var updatename = names[i];
+            document.getElementById("family_member_image").src = updateimage;
+            document.getElementById("family_member_name").innerHTML = updatename;
+            i++;
+        }
+    </script>
+</body>
+
+</html>
